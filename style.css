@@ -40,6 +40,7 @@ body {
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
+    position: relative;
 }
 
 .game-info {
@@ -60,7 +61,7 @@ body {
 }
 
 /* 添加复古的扫描线效果 */
-#gameCanvas::after {
+.game-container::after {
     content: '';
     position: absolute;
     top: 0;
@@ -75,4 +76,9 @@ body {
         transparent 2px
     );
     pointer-events: none;
+    z-index: 10;
+}
+
+.game-container {
+    position: relative;
 }
